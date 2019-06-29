@@ -106,7 +106,7 @@ export function getSignCache(value?: string): string {
   return sign;
 }
 
-const DELIMITERS = [' ', '-', '_'];
+const DELIMITERS = [' ', '-', '_', '.'];
 
 export function getSign(value?: string): string {
   if (
@@ -115,7 +115,7 @@ export function getSign(value?: string): string {
   ) {
     const ln = value.length;
 
-    let sign = '', offset = 0, addNext = true;
+    let sign = '', reserve = '', offset = 0, addNext = true;
 
     while (offset < ln) {
       const char = value.charAt(offset);
@@ -128,12 +128,17 @@ export function getSign(value?: string): string {
       }
 
       if (!addNext) {
+        if (!reserve) {
+          if (sign.length === 1) {
+            if (canUseChar(char)) {
+              reserve = char.toUpperCase();
+            }
+          }
+        }
         continue;
       }
 
-      const range = findRange(char.charCodeAt(0));
-
-      if (range) {
+      if (canUseChar(char)) {
         addNext = false;
         sign += char.toUpperCase();
       }
@@ -141,6 +146,10 @@ export function getSign(value?: string): string {
       if (sign.length === 2) {
         break;
       }
+    }
+
+    if (sign.length === 1 && reserve) {
+      sign += reserve;
     }
 
     return sign;
@@ -159,6 +168,10 @@ const ranges = [
   // а-я
   [0x430, 0x44F]
 ];
+
+function canUseChar(char) {
+  return findRange(char.charCodeAt(0)) !== undefined;
+}
 
 function findRange(charCode: number): number[] | void {
   return ranges.find(

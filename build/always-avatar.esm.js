@@ -1,0 +1,1 @@
+import{p as s,b as a}from"./p-f15d63e5.js";s().then(s=>a([["p-4cn8gllx",[[1,"always-avatar",{source:[1],size:[8]}]]]],{resourcesUrl:s}));

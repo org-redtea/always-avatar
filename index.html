@@ -1,0 +1,42 @@
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Always Avatar</title>  <script nomodule="" src="/build/always-avatar.js"></script> </head> <body> <script>
+    const ranges = [
+      // A-Z
+      [0x41, 0x5A],
+      // А-Я
+      [0x410, 0x42F]
+    ];
+
+    document.write(generate(generateAlphabet(ranges)));
+
+    function generateAlphabet(ranges) {
+      return ranges.reduce((out, range) => {
+        const [min, max]= range;
+        let current = min;
+
+        while (current <= max) {
+          out += String.fromCharCode(current);
+          current++;
+        }
+
+        return out;
+      }, '')
+    }
+
+    function generate(alphabet) {
+      let content = '';
+
+      for (let i = 0; i < alphabet.length; i++) {
+        content += generateEl(alphabet[i]);
+
+        for (let ii = 0; ii < alphabet.length; ii++) {
+          content += generateEl(alphabet[i] + '-' + alphabet[ii])
+        }
+      }
+
+      return content;
+    }
+
+    function generateEl(source, size = 100) {
+      return `<always-avatar source="${source}" size="${size}"></always-avatar>`;
+    }
+  </script> <script type="module" data-resources-url="/build/" data-namespace="always-avatar">import{p as s,b as a}from"/build/p-f15d63e5.js";s().then(s=>a([["p-4cn8gllx",[[1,"always-avatar",{source:[1],size:[8]}]]]],{resourcesUrl:s}));</script></body></html>

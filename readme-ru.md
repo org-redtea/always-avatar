@@ -26,10 +26,10 @@ Always Avatar построен на [Stencil](https://stenciljs.com/), так ч
 ```
 
 <div align="center">
-  <img alt="Avatar for mr.hokid@gmail.com" src="https://raw.githubusercontent.com/Hokid/vuex-up/master/docs/images/example_1.png" width="40" height="40" />
-  <img alt="Avatar for Kirill Khoroshilov" src="https://raw.githubusercontent.com/Hokid/vuex-up/master/docs/images/example_2.png" width="40" height="40" />
-  <img alt="Avatar for mr-no-avatar" src="https://raw.githubusercontent.com/Hokid/vuex-up/master/docs/images/example_3.png" width="40" height="40" />
-  <img alt="Avatar for no.avatar" src="https://raw.githubusercontent.com/Hokid/vuex-up/master/docs/images/example_4.png" width="40" height="40" />
+  <img alt="Avatar for mr.hokid@gmail.com" src="https://raw.githubusercontent.com/org-redtea/always-avatar/master/docs/images/example_1.png" width="40" height="40" />
+  <img alt="Avatar for Kirill Khoroshilov" src="https://raw.githubusercontent.com/org-redtea/always-avatar/master/docs/images/example_2.png" width="40" height="40" />
+  <img alt="Avatar for mr-no-avatar" src="https://raw.githubusercontent.com/org-redtea/always-avatar/master/docs/images/example_3.png" width="40" height="40" />
+  <img alt="Avatar for no.avatar" src="https://raw.githubusercontent.com/org-redtea/always-avatar/master/docs/images/example_4.png" width="40" height="40" />
 </div>
 
 <div align="center">

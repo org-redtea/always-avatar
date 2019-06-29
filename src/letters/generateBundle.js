@@ -55,15 +55,7 @@ function createBundle(_path) {
   const bundle = {};
 
   for (const letter of letters) {
-    const sourceSvgPath = getSvgPath(letter.content);
-    const svgPath = normalizeSvgPath(sourceSvgPath);
-    const bbox = getBBox(svgPath);
-
-    bundle[letter.letter] = {
-      path: svgPath,
-      width: bbox.width,
-      height: bbox.height,
-    };
+    bundle[letter.letter] = getLetterDataFromSvg(letter.content);
   }
 
   return bundle;
@@ -87,31 +79,19 @@ function getLetter(_path) {
   };
 }
 
-function getSvgPath(svg) {
+function getLetterDataFromSvg(svg) {
   const dom = new JSDOM(svg);
-  return dom.window.document
-    .querySelector('path')
-    .getAttribute('d');
-}
-
-function normalizeSvgPath(svgPath) {
-  svgPath = svgpath(svgPath)
-    .abs();
-
-  const params = getBBox(svgPath.toString());
-
-  return svgPath
-    .translate(-params.x, -params.y)
-    .toString();
-}
-
-function getBBox(svgPath) {
-  const bounds = getBounds(svgPath);
+  const svgEl = dom.window.document
+    .querySelector('svg');
+  const pathEl = dom.window.document
+    .querySelector('path');
+  const path = pathEl.getAttribute('d');
+  const width = svgEl.getAttribute('width');
+  const height = svgEl.getAttribute('height');
 
   return {
-    x: bounds[0],
-    y: bounds[1],
-    width: bounds[2],
-    height: bounds[3]
+    path,
+    width: parseFloat(width),
+    height: parseFloat(height)
   };
 }

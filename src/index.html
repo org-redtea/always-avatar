@@ -10,11 +10,47 @@
 
 </head>
 <body>
+  <script>
+    const ranges = [
+      // A-Z
+      [0x41, 0x5A],
+      // А-Я
+      [0x410, 0x42F]
+    ];
 
-  <always-avatar source="Stencil FFFF" size="100"></always-avatar>
-  <always-avatar source="A B" size="100"></always-avatar>
-  <always-avatar source="А С" size="100"></always-avatar>
-  <always-avatar source="С Я" size="100"></always-avatar>
+    document.write(generate(generateAlphabet(ranges)));
 
+    function generateAlphabet(ranges) {
+      return ranges.reduce((out, range) => {
+        const [min, max]= range;
+        let current = min;
+
+        while (current <= max) {
+          out += String.fromCharCode(current);
+          current++;
+        }
+
+        return out;
+      }, '')
+    }
+
+    function generate(alphabet) {
+      let content = '';
+
+      for (let i = 0; i < alphabet.length; i++) {
+        content += generateEl(alphabet[i]);
+
+        for (let ii = 0; ii < alphabet.length; ii++) {
+          content += generateEl(alphabet[i] + '-' + alphabet[ii])
+        }
+      }
+
+      return content;
+    }
+
+    function generateEl(source, size = 100) {
+      return `<always-avatar source="${source}" size="${size}"></always-avatar>`;
+    }
+  </script>
 </body>
 </html>

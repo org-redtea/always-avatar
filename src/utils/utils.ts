@@ -1,8 +1,28 @@
+import bundle from '../letters/dist/bundle.json';
+
 const min = Math.min;
 const max = Math.max;
 
 const WHITE = '#ffffff';
 const DEFAULT_PALLET = ['#f8e7e7', WHITE];
+
+export function getSVGGenerationData(sign: string): ({path: string, width: number, height: number})[] {
+  const ln = sign.length;
+
+  if (ln === 0) {
+    return [];
+  }
+
+  let offset = 0, list = [];
+
+  while (offset < ln) {
+    list.push(bundle[sign[offset]]);
+    offset++;
+  }
+
+  return list;
+}
+
 
 const palletCache = new Map();
 

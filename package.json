@@ -1,6 +1,6 @@
 {
   "name": "@redtea/always-avatar",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Generate a nice replacement of avatar for you using, for example, a username or email",
   "author": "Kirill Khoroshilov <mr.hokid@gmail.com>",
   "repository": {

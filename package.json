@@ -1,7 +1,35 @@
 {
-  "name": "always-avatar",
+  "name": "@redtea/always-avatar",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Generate a nice replacement of avatar for you using, for example, a username or email",
+  "author": "Kirill Khoroshilov <mr.hokid@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/org-redtea/always-avatar"
+  },
+  "keywords": [
+    "web-component",
+    "web",
+    "component",
+    "components",
+    "ui-components",
+    "avatar",
+    "text-avatar",
+    "generate-avatar",
+    "generate",
+    "avatar-replacement",
+    "no-avatar",
+    "placeholder",
+    "avatar-placeholder",
+    "react",
+    "vue",
+    "angular",
+    "profile",
+    "image",
+    "photo",
+    "ui",
+    "lib"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -12,7 +40,10 @@
   "unpkg": "dist/always-avatar/always-avatar.js",
   "files": [
     "dist/",
-    "loader/"
+    "loader/",
+    "docs/",
+    "readme.md",
+    "readme-ru.md"
   ],
   "scripts": {
     "build": "stencil build --docs",

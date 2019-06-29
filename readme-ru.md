@@ -2,21 +2,21 @@
 
 # Always Avatar
 
-[RU](https://github.com/org-redtea/always-avatar/blob/master/readme-ru.md)
+[EN](https://github.com/org-redtea/always-avatar/blob/master/readme.md)
 
-No avatar? - No problem! Let`s generate it!
+Нет аватарки? - Не проблема! Сгенерируем!
 
-**Always Avatar** will generate a nice replacement of avatar for you using, for example, a username or email.
+**Always Avatar** сгенерирует для тебя неплохую замену аватарки используя, к примеру, имя пользователя или email.
 
-# Installing
+# Установка
 
 ```bash
 $ npm install -SE @redtea/always-avatar
 ```
 
-# How to use
+# Как пользоваться
 
-Always Avatar made with [Stencil](https://stenciljs.com/), so you can use it anywhere. More details on how to use the component with your framework [here](https://stenciljs.com/docs/overview), and how to include to your web page [here](https://stenciljs.com/docs/javascript).
+Always Avatar построен на [Stencil](https://stenciljs.com/), так что вы можете использовать его где угодно. Подробней о том как использовать компонент вместе с вашим фреймворком [тут](https://stenciljs.com/docs/overview), а для подключение на странице [тут](https://stenciljs.com/docs/javascript).
 
 ```HTML
 <always-avatar source="mr.hokid@gmail.com" size="40"></always-avatar>
@@ -26,14 +26,14 @@ Always Avatar made with [Stencil](https://stenciljs.com/), so you can use it any
 ```
 
 <div align="center">
-  <img alt="Avatar for mr.hokid@gmail.com" src="https://raw.githubusercontent.com/org-redtea/always-avatar/master/docs/images/example_1.png" width="40" height="40" />
-  <img alt="Avatar for Kirill Khoroshilov" src="https://raw.githubusercontent.com/org-redtea/always-avatar/master/docs/images/example_2.png" width="40" height="40" />
-  <img alt="Avatar for mr-no-avatar" src="https://raw.githubusercontent.com/org-redtea/always-avatar/master/docs/images/example_3.png" width="40" height="40" />
-  <img alt="Avatar for no.avatar" src="https://raw.githubusercontent.com/org-redtea/always-avatar/master/docs/images/example_4.png" width="40" height="40" />
+  <img alt="Avatar for mr.hokid@gmail.com" src="https://raw.githubusercontent.com/Hokid/vuex-up/master/docs/images/example_1.png" width="40" height="40" />
+  <img alt="Avatar for Kirill Khoroshilov" src="https://raw.githubusercontent.com/Hokid/vuex-up/master/docs/images/example_2.png" width="40" height="40" />
+  <img alt="Avatar for mr-no-avatar" src="https://raw.githubusercontent.com/Hokid/vuex-up/master/docs/images/example_3.png" width="40" height="40" />
+  <img alt="Avatar for no.avatar" src="https://raw.githubusercontent.com/Hokid/vuex-up/master/docs/images/example_4.png" width="40" height="40" />
 </div>
 
 <div align="center">
-  <a href="https://org-redtea.github.io/always-avatar/">More examples</a>
+  <a href="https://org-redtea.github.io/always-avatar/">Еще примеры</a>
 </div>
 
 

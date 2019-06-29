@@ -26,7 +26,7 @@ import {getColorPalletCache, getSignCache, getSVGGenerationData} from '../../uti
       vertical-align: middle;
       fill: currentColor;
       height: 35%;
-      margin-bottom: -8%;
+      margin-bottom: -4%;
     }
   `
 })

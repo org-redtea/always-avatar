@@ -21,7 +21,11 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "devDependencies": {
-    "@stencil/core": "^1.0.7"
+    "@stencil/core": "^1.0.7",
+    "jsdom": "15.1.1",
+    "rimraf": "2.6.3",
+    "svg-path-bounds": "1.0.1",
+    "svgpath": "2.2.2"
   },
   "license": "MIT"
 }
